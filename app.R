@@ -6,6 +6,7 @@
 suppressPackageStartupMessages({
   library(shiny); library(bslib); library(sf); library(dplyr); library(ggplot2)
   library(ggiraph); library(biscale); library(patchwork); library(arrow); library(zip)
+  library(markdown)   # used by includeMarkdown(); loading it here makes the manifest list it
 })
 source("texts.R", local = TRUE)
 
