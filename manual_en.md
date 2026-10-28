@@ -23,7 +23,7 @@ The language button (NL | EN) and this manual are always in the top right corner
 
 **Level.** A *buurt* is a small neighbourhood. A *wijk* is a bigger district made of several buurten.
 
-**Variable X and Y.** The two things you compare. X goes along the bottom, Y goes up the side. Press *Browse variables* to see them all, grouped **by theme** (the subject, like income or health) or **by data type** (what kind of numbers they are). The **i** next to a variable tells you what it means and what type of data it is. The text under the box shows the type of your current choice.
+**Variable X and Y.** The two things you compare. X goes along the bottom, Y goes up the side. Press *Browse variables* to see them all, grouped either **by theme** (the subject, like income or health) or **by data type** (what kind of numbers they are). The **i** next to a variable tells you what it means and what type of data it is. The text under the box shows the type of your current choice.
 
 **Scatter plot.** One dot per area. The line is the *regression line*: the straight line that fits best through the dots. The **n** at the bottom is the number of areas in the plot. Areas without a value for X or Y are left out. Move your mouse over a dot to see which area it is.
 
@@ -47,7 +47,7 @@ The language button (NL | EN) and this manual are always in the top right corner
 - Dots in a cloud without direction: no clear relationship.
 - The tighter the dots around the line, the stronger the relationship.
 
-A relationship is not proof that one thing *causes* the other. Ice cream sales and sunburn go up together, but ice cream does not cause sunburn: the sun does.
+A relationship is not proof that one thing *causes* the other: Ice cream sales and sunburn go up together, but ice cream does not cause sunburn: the sun does.
 
 ## 5. What kind of data can you use?
 
@@ -55,7 +55,7 @@ Not all numbers are the same. Statisticians call this the 'level of measurement'
 
 | Type | What it is | Example | Correlation allowed? |
 |---|---|---|---|
-| **Nominal** (categories) | Names without order | Type of area: city, village | No. Use group comparisons instead. Not offered here. |
+| **Nominal** (categories) | Names without order | Type of area: city, village | No. Use group comparisons instead. This is not offered here. |
 | **Ordinal** (ordered classes) | Order, but unequal gaps | Urbanity 1 to 5 | Rank correlation (Spearman). Not Pearson. |
 | **Interval** | Equal gaps, zero is arbitrary | Temperature in Celsius | Yes. |
 | **Ratio** | Equal gaps, zero means 'none' | Income, age, distance, counts, percentages | Yes. |
@@ -63,8 +63,8 @@ Not all numbers are the same. Statisticians call this the 'level of measurement'
 Almost all variables here are **ratio** variables, split in four groups:
 
 - **Counts** (inhabitants, houses). Careful: big areas have big counts for everything. Two counts will almost always correlate, simply because both follow the size of the area. This is called the *size effect*. Prefer percentages or rates.
-- **Percentages** (share of people over 65). Fair between areas of different size. They stay between 0 and 100, and percentages that add up to a whole (like age groups) pull each other down.
-- **Rates and densities** (inhabitants per km2). Fair, but a few very crowded areas can be extreme outliers.
+- **Percentages** (share of people over 65). Trustworthy between areas of different size. They stay between 0 and 100, and percentages that add up to a whole (like age groups) pull each other down.
+- **Rates and densities** (inhabitants per km2). Trustworthy, but a few very crowded areas can be extreme outliers.
 - **Amounts and averages** (average income). Averages hide differences inside an area. Very skewed data (like income) often looks better after a log transformation, or you can use Spearman.
 
 ### Combinations and what they mean
@@ -77,15 +77,15 @@ Almost all variables here are **ratio** variables, split in four groups:
 | Count and count | Be suspicious: probably the size effect. Switch to percentages or rates. |
 | Anything with a nominal variable | Correlation does not work. Compare groups instead (for example a t-test or ANOVA). |
 
-The consequence of a wrong choice: a number comes out, but it means nothing, or it points in the wrong direction. The plot always draws a straight line, even when it does not fit. So always look at the dots, not only at the line.
+**The consequence of a wrong choice: a number comes out, but it means nothing, or it points in the wrong direction. The plot always draws a straight line, even when it does not fit. So always look at the dots, not only at the line.**
 
 ## 6. Traps to avoid
 
 - **Ecological fallacy.** A pattern between areas does not apply to individual people. A rich buurt with healthy people does not mean that rich individuals are healthier.
-- **Neighbours are alike.** Buurten next to each other tend to resemble each other (*spatial autocorrelation*). Your dots are not truly independent, so tests make results look more certain than they are.
+- **Neighbours are alike.** Buurten next to each other tend to resemble each other (*spatial autocorrelation*). Your dots are not truly independent, so the tests make results look more certain than they are.
 - **Borders matter.** Cutting the map into other areas can change the result (the *modifiable areal unit problem*).
 - **Missing data.** Small areas often have no value because of privacy. The **n** shows how many areas remain.
-- **Third factors.** Two things can go together because of a third thing (for example the age of the residents).
+- **Third factors.** Two variables can go together because of a third variable that also influences one or both (for example education. A healthy lifestyle (non-smoking and exercise) together with income have a positive correlation, but this is caused by a higher education that has a positive correlation to both).
 
 ## 7. Using the website in your research
 

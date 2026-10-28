@@ -1,6 +1,6 @@
 ## 1. Wat is deze website?
 
-Buurt Explorer helpt je om patronen te zoeken tussen twee dingen in Nederlandse buurten. Bijvoorbeeld: hebben buurten met een hoger inkomen ook gezondere mensen? Jij kiest twee dingen en de website maakt een **spreidingsdiagram** en een **kleurenkaart**.
+Buurt Explorer helpt je om patronen te zoeken tussen twee variabelen in Nederlandse buurten. Bijvoorbeeld: hebben buurten met een hoger inkomen ook gezondere mensen? Jij kiest twee dingen en de website maakt een **spreidingsdiagram** en een **kleurenkaart**.
 
 De website is bedoeld als inspiratie en beginpunt. Gebruik hem om ideeën op te doen en controleer ze daarna zelf goed (zie hoofdstuk 7).
 
@@ -27,7 +27,7 @@ De taalknop (NL | EN) en deze handleiding staan altijd rechtsboven. Elke kleine 
 
 **Spreidingsdiagram.** Eén stip per gebied. De lijn is de *regressielijn*: de rechte lijn die het best door de stippen past. De **n** onderaan is het aantal gebieden in de grafiek. Gebieden zonder waarde voor X of Y worden weggelaten. Beweeg je muis over een stip om te zien welk gebied het is.
 
-**Lasso-selectie / deselectie.** Twee knoppen rechtsboven in de grafiek. Met *lasso-selectie* teken je een lus om stippen om ze te markeren. Met *lasso-deselectie* haal je de markering weg. De lijn en de kaart veranderen niet.
+**Lasso-selectie / deselectie.** Twee knoppen rechtsboven in de grafiek. Met *lasso-selectie* teken je een lus om stippen om ze te markeren. Met *lasso-deselectie* haal je de markering weg.De lijn en de kaart veranderen niet.
 
 **Kaart.** Dezelfde gebieden met kleuren.
 - *Bivariaat*: beide variabelen tegelijk. Een kleurenraster van 3 x 3: licht = laag op beide, donker = hoog op beide, en de gemengde kleuren laten zien waar de één hoog is en de ander laag.
@@ -47,7 +47,7 @@ De taalknop (NL | EN) en deze handleiding staan altijd rechtsboven. Elke kleine 
 - Stippen in een wolk zonder richting: geen duidelijk verband.
 - Hoe dichter de stippen om de lijn zitten, hoe sterker het verband.
 
-Een verband is geen bewijs dat het ene dingen het andere *veroorzaakt*. Ijsverkoop en zonnebrand gaan samen omhoog, maar ijs veroorzaakt geen zonnebrand: de zon doet dat.
+Een verband is geen bewijs dat het ene ding het andere *veroorzaakt*: Ijsverkoop en zonnebrand gaan samen omhoog, maar ijs veroorzaakt geen zonnebrand: de zon doet dat.
 
 ## 5. Welke soort data kun je gebruiken?
 
@@ -55,7 +55,7 @@ Niet alle getallen zijn hetzelfde. Statistici noemen dit het 'meetniveau'.
 
 | Soort | Wat het is | Voorbeeld | Correlatie toegestaan? |
 |---|---|---|---|
-| **Nominaal** (categorieën) | Namen zonder volgorde | Soort gebied: stad, dorp | Nee. Vergelijk in plaats daarvan groepen. Wordt hier niet aangeboden. |
+| **Nominaal** (categorieën) | Namen zonder volgorde | Soort gebied: stad, dorp | Nee. Vergelijk in plaats daarvan groepen. Dit wordt niet hier aangeboden. |
 | **Ordinaal** (geordende klassen) | Volgorde, maar ongelijke afstanden | Stedelijkheid 1 tot 5 | Rangcorrelatie (Spearman). Niet Pearson. |
 | **Interval** | Gelijke afstanden, nul is willekeurig | Temperatuur in graden Celsius | Ja. |
 | **Ratio** | Gelijke afstanden, nul betekent 'geen' | Inkomen, leeftijd, afstand, aantallen, percentages | Ja. |
@@ -63,8 +63,8 @@ Niet alle getallen zijn hetzelfde. Statistici noemen dit het 'meetniveau'.
 Bijna alle variabelen hier zijn **ratio**-variabelen, verdeeld in vier groepen:
 
 - **Aantallen** (inwoners, woningen). Let op: grote gebieden hebben van alles grote aantallen. Twee aantallen correleren dus bijna altijd, simpelweg omdat beide meegroeien met de grootte van het gebied. Dit heet het *grootte-effect*. Kies liever percentages of verhoudingen.
-- **Percentages** (aandeel 65-plussers). Eerlijk tussen gebieden van verschillende grootte. Ze blijven tussen 0 en 100, en percentages die samen een geheel vormen (zoals leeftijdsgroepen) trekken elkaar naar beneden.
-- **Dichtheden en verhoudingen** (inwoners per km2). Eerlijk, maar een paar zeer drukke gebieden kunnen extreme uitschieters zijn.
+- **Percentages** (aandeel 65-plussers). Betrouwbaar tussen gebieden van verschillende grootte. Ze blijven tussen 0 en 100, en percentages die samen een geheel vormen (zoals leeftijdsgroepen) trekken elkaar naar beneden.
+- **Dichtheden en verhoudingen** (inwoners per km2). Betrouwbaar, maar een paar zeer drukke gebieden kunnen extreme uitschieters zijn.
 - **Bedragen en gemiddelden** (gemiddeld inkomen). Gemiddelden verbergen verschillen binnen een gebied. Sterk scheve data (zoals inkomen) ziet er vaak beter uit na een logaritme-transformatie, of je gebruikt Spearman.
 
 ### Combinaties en wat ze betekenen
@@ -77,15 +77,15 @@ Bijna alle variabelen hier zijn **ratio**-variabelen, verdeeld in vier groepen:
 | Aantal en aantal | Wees wantrouwend: waarschijnlijk het grootte-effect. Schakel over op percentages of verhoudingen. |
 | Alles met een nominale variabele | Correlatie werkt niet. Vergelijk groepen (bijvoorbeeld met een t-toets of ANOVA). |
 
-Het gevolg van een verkeerde keuze: er komt wel een getal uit, maar het betekent niets of wijst de verkeerde kant op. De grafiek tekent altijd een rechte lijn, ook als die niet past. Kijk dus altijd naar de stippen, niet alleen naar de lijn.
+**Het gevolg van een verkeerde keuze: er komt wel een getal uit, maar het betekent niets of wijst de verkeerde kant op. De grafiek tekent altijd een rechte lijn, ook als die niet past. Kijk dus altijd naar de stippen, niet alleen naar de lijn.**
 
 ## 6. Valkuilen
 
 - **Ecologische denkfout.** Een patroon tussen gebieden geldt niet voor individuele mensen. Een rijke buurt met gezonde mensen betekent niet dat rijke individuen gezonder zijn.
-- **Buren lijken op elkaar.** Buurten naast elkaar lijken vaak op elkaar (*ruimtelijke autocorrelatie*). Je stippen zijn niet echt onafhankelijk, waardoor toetsen resultaten zekerder doen lijken dan ze zijn.
+- **Buren lijken op elkaar.** Buurten naast elkaar lijken vaak op elkaar (*ruimtelijke autocorrelatie*). Je stippen zijn niet echt onafhankelijk, waardoor de toetsen resultaten zekerder doen lijken dan ze zijn.
 - **Grenzen doen ertoe.** Als je de kaart anders in gebieden verdeelt, kan de uitkomst veranderen (het *modifiable areal unit problem*).
 - **Ontbrekende data.** Kleine gebieden hebben vaak geen waarde vanwege privacy. De **n** toont hoeveel gebieden overblijven.
-- **Derde factoren.** Twee dingen kunnen samengaan door een derde ding (bijvoorbeeld de leeftijd van de bewoners).
+- **Derde factoren.** Twee variabelen kunnen samengaan door een derde variabel die ook invloed op één of beide uitoefend (bijvoorbeeld educatie. Gezonde leefstijl (niet roken en sporten) samen met inkomen heeft een positief verband, dit echter veroorzaakt door een hogere educatie die met beide variabelen een positief verband heeft).
 
 ## 7. De website gebruiken voor onderzoek
 
