@@ -224,6 +224,13 @@ export_inputs <- function(p) tagList(
     selectInput(paste0(p, "_fmt"), lbl("ex_fmt"), c("png", "svg", "pdf")))
 )
 
+# Bivariate palettes: keep only the names that the installed biscale version accepts
+# (newer versions renamed some palettes), and only those that work for 2, 3 and 4 classes.
+BI_PALS <- Filter(function(p) all(vapply(2:4, function(d)
+    !inherits(try(biscale::bi_pal(p, dim = d, preview = FALSE), silent = TRUE), "try-error"), logical(1))),
+  c("DkBlue", "BlueGold", "BlueOr", "BlueYl", "BlueOrange", "BlueYellow", "Bluegill", "BrBG", "BrownBlue",
+    "DkCyan", "DkViolet", "GrPink", "PinkGrn", "PurpleGrn", "PurpleOr", "PurpleOrange"))
+
 search_opts <- list(openOnFocus = FALSE, placeholder = "Type to search\u2026 / Typ om te zoeken\u2026")
 
 # ---- UI ----
@@ -289,8 +296,7 @@ ui <- page_navbar(
                                       L("Single variable", "Enkele variabele")),
                    choiceValues = c("bi", "single")),
       conditionalPanel("input.m_type == 'bi'",
-        selectInput("m_pal", lbl("m_pal"), c("DkBlue", "BlueGold", "BlueOrange", "BlueYellow", "Bluegill",
-                    "BrownBlue", "DkCyan", "DkViolet", "GrPink", "PinkGrn", "PurpleGrn", "PurpleOrange")),
+        selectInput("m_pal", lbl("m_pal"), BI_PALS),
         radioButtons("m_dim", lbl("m_dim"), c(2, 3, 4), selected = 3, inline = TRUE)),
       conditionalPanel("input.m_type == 'single'",
         radioButtons("m_var", lbl("m_var"), c("X" = "x", "Y" = "y"), inline = TRUE),
